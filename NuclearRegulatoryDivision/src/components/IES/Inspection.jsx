@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import LresNavbar from "./LresNavbar";
 import LresHero from "./LresHero";
-import LresFooter from "./LresFooter";
+import IesFooter from "./LresFooter";
 import logo1 from "../../assets/BP-LOGO-BT.png";
 import logo2 from "../../assets/foi_logo.png";
 import logo3 from "../../assets/INSO_Thumbnail.png";
@@ -114,7 +114,7 @@ const LicensingApplication = () => {
         </div>
       </section>
 
-      <LresFooter />
+      <IesFooter />
     </div>
   );
 };

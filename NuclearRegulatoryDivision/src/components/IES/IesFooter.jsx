@@ -15,9 +15,10 @@ const Footer = () => {
           <div className="space-y-4" data-aos="fade-right" data-aos-delay="200">
             <h3 className="text-xl font-bold text-blue-500">About Us</h3>
             <p className="text-gray-400">
-              The Licensing, Review, and Evaluation Section (LRES) ensures the
-              safe and secure use of nuclear and radioactive materials in
-              compliance with national and international standards.
+            IES conducts inspection and enforcement activities/actions of 
+            licensed radioactive materials and atomic energy facilities 
+            to ensure compliance with regulatory requirements and licensees’ 
+           commitments.
             </p>
           </div>
 
@@ -36,7 +37,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li>PNRI Building, Commonwealth Avenue</li>
               <li>Diliman, Quezon City, Philippines</li>
-              <li>Email: lres@pnri.gov.ph</li>
+              <li>Email: ies@pnri.gov.ph</li>
               <li>Phone: +63 2 123 4567</li>
             </ul>
           </div>

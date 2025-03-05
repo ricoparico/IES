@@ -7,7 +7,7 @@ import logo2 from "../../assets/foi_logo.png";
 import logo3 from "../../assets/INSO_Thumbnail.png";
 import logo4 from "../../assets/AEW52_Thumbnail.png";
 import LresHero from "./IesHero";
-import LresFooter from "./IesFooter";
+import IesFooter from "./IesFooter";
 import LresRating from "./IesRating";
 import Inspection from "../../assets/inspection.jpg"
 import Enforcement from "../../assets/enforcement.jpg"
@@ -150,7 +150,7 @@ const Ies = () => {
       </section> 
 
       {/* Footer */}
-      <LresFooter />
+      <IesFooter />
     </div>
   );
 };

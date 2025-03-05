@@ -17,8 +17,9 @@ import Contacts from "./components/Homepage/Contacts";
 import Activities from "./components/Homepage/Activities";
 import Ies from "./components/IES/Ies";
 import Permit from "./components/IES/permit";
-import Complaint from "./components/IES/complaint"
-import InspectionPage from "./components/IES/inspectionpage"
+import Complaint from "./components/IES/complaint";
+import InspectionPage from "./components/IES/inspectionpage";
+import Contact from "./components/IES/contact";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
           <Route path="/complaint" element={<Complaint/>}/>
           <Route path="/inspectionpage" element={<InspectionPage/>}/>
           <Route path="/Activities" element={<Activities />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         
       </div>
