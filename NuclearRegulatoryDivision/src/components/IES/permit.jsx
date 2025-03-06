@@ -102,19 +102,19 @@ const Ies = () => {
           <p className="text-gray-700 text-lg mt-4">
            Permits to Transport radioactive materials should be sent only to 
          
-          <i className="text-blue-500 ml-1 mr-1">
-          <u> 
+          <i className="text-blue-500 ml-1 mr-1 hover:underline">
+           
           <a href="mailto:nrd-pt@pnri.dost.gov.ph">
            nrd-pt@pnri.dost.gov.ph.
            </a>
-          </u>
+          
           </i><br></br>
         
           The cut-off for requests is every Monday and Wednesday at 2:00 pm, while the issuance of Permits 
           takes place every Tuesday and Thursday from 10:00 AM to 4:00 PM.
           
           
-          <i className="text-red-600 mr-1 ml-2"><u>Permits shall not be issued on any other day unless otherwise advised.</u></i> 
+          <i className="text-red-600 mr-1 ml-2 hover:underline">Permits shall not be issued on any other day unless otherwise advised.</i> 
           <p className="mt-5">Please accomplish and email the following requirements for securing a Permit to Transport (e-copy/scanned):</p>
 
           <p className="mt-5 ml-15">1. Request/Cover letter regarding the plan to transport your radioactive material to your planned destination addressed to the following:</p>
@@ -125,25 +125,25 @@ const Ies = () => {
 
           <p className="mt-5 ml-15">2. Completely filled-out Consignor’s Declaration for the Transport of Radioactive Material (see attachment through this 
              <a href="https://pnridostgovph-my.sharepoint.com/:f:/g/personal/nrd-pt_pnri_dost_gov_ph/ErSuwLb1Qj1KnwCNl2zCNJwB6Y-tIyc2XSGvu-gO352I3g?e=bLERWJ"target="_blank">
-             <u className=" text-blue-500 ml-2">Link</u>.)
+             <i className=" text-blue-500 ml-2 hover:underline">Link</i>.)
              </a>
           </p>
           <p className="mt-5 ml-15">3. Permit to Transport Fee ( PhP 500.00 / permit). Kindly indicate preferred payment option (Online/On-site).</p>
-          <p className="mt-5 ml-15">4. Certificate of Release for Importation of RAM. <u className="text-red-600">Requests (Imported RAM only) without the Certificate of Release shall not be processed.</u></p>
+          <p className="mt-5 ml-15">4. Certificate of Release for Importation of RAM. <i className="text-red-600 hover:underline">Requests (Imported RAM only) without the Certificate of Release shall not be processed.</i></p>
           <p className="mt-5 ml-15">5. Shipper’s Declaration of Dangerous Goods, Airway Bill and Packaging List (for imported RAM only).</p>
           
           <p className="mt-5 font-bold">The Certificate of Release needs to be requested from the Licensing, Review and Evaluation Section. Kindly contact them for instructions at
-          <a href="mailto:nrd-lre@pnri.dost.gov.ph">
-          <u className="ml-2 text-blue-500 font-bold">nrd-lre@pnri.dost.gov.ph.</u></a></p>
+          <a href="mailto:nrd-lre@pnri.dost.gov.ph" className="ml-2 text-blue-500 font-bold hover:underline">
+            nrd-lre@pnri.dost.gov.ph.</a></p>
 
           <p className="mt-5">For the payment and claiming of permit/s, kindly schedule an appointment online through the link</p>
           <a href="https://services.pnri.dost.gov.ph/portal/nrd/Appoint" target="_blank">
-          <p className="text-blue-900"><u>https://services.pnri.dost.gov.ph/portal/nrd/Appoint</u>.</p>
+          <p className="text-blue-900 hover:underline">https://services.pnri.dost.gov.ph/portal/nrd/Appoint.</p>
           </a>
           
           <p className="mt-5 mb-20">For any questions and clarifications, you may address your concern or inquiry to 
           <a href="mailto:nrd-pt@pnri.dost.gov.ph">
-          <i><u className="text-blue-500 ml-1">nrd-pt@pnri.dost.gov.ph</u></i>.</a></p>
+          <i className="text-blue-500 ml-1 hover:underline">nrd-pt@pnri.dost.gov.ph</i>.</a></p>
           
 
           

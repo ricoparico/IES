@@ -72,7 +72,7 @@ const Ies = () => {
     <div className="mb-4">
       <p className="text-lg font-medium text-gray-700">
         <span className="font-semibold">Telephone No.:</span> 
-        (02) 8929-6010 to 19 loc. 266 / (02) 8929-6011 to 19 loc. 266
+        <i className="hover:underline">(02) 8929-6010 to 19 loc. 266</i> / <i className="hover:underline">(02) 8929-6011 to 19 loc. 266</i>
       </p>
     </div>
 
@@ -80,7 +80,7 @@ const Ies = () => {
     <div className="mb-4">
       <p className="text-lg font-medium text-gray-700">
         <span className="font-semibold">Mobile No.:</span> 
-        0995-009-3518 (Globe)
+        <i className="hover:underline">0995-009-3518 </i>(Globe)
       </p>
     </div>
   </div>

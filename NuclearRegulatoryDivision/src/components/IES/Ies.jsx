@@ -157,8 +157,8 @@ const Ies = () => {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-6">
             {responsibilities.map((item, index) => (
-              <a
-                href={item.Link}   target={item.title === "Incident Form" ? "_blank" : "_self"}
+              <Link
+                link to={item.Link}   target={item.title === "Incident Form" ? "_blank" : "_self"}
                 key={index}
                 className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 flex items-start space-x-4 
                 transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl hover:border-blue-600"
@@ -172,7 +172,7 @@ const Ies = () => {
                   </h3>
                   <p className="text-gray-700">{item.description}</p>
                 </div>
-              </a>
+              </Link>
             ))}
            
           </div>
