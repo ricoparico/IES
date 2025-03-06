@@ -56,29 +56,29 @@ const Ies = () => {
       Link:"/inspectionpage",
       title: "Inspection",
       description:
-        "Inspection",
+        "Inspections ensure compliance with safety standards for handling, storage, and transport of radioactive materials. They help maintain safety, minimize risks, and ensure legal adherence.",
       icon: "🔍",
     },
     {
       Link:"/complaint",
       title: "File a Complaint",
       description:
-        "Enforcement",
-      icon: "🛂",
+        "If you have concerns or complaints about a licensee or facility under our oversight, please submit a detailed report.",
+        icon: "📝"
     },
 
     {
       Link:"/permit",
       title: "Permit to Transport",
       description:
-        "Permit to Transport",
+        "To transport radioactive materials, a valid permit is required. Please apply for a permit by providing the necessary details and ensuring compliance with safety regulations.",
       icon: "📜"
     },
     {
       Link: "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.pnri.dost.gov.ph%2Fimages%2Fofficialforms%2FEmergencyIncident_Notification_Services%2FIncidentNotificationForm.doc&wdOrigin=BROWSELINK",
       title: "Incident Form",
       description:
-        "Incident Report",
+        "If you’ve witnessed or been involved in an incident with radioactive materials, please report it immediately. Provide details to help us address the situation safely and efficiently.",
       icon: "📉",
     },
   ];
@@ -167,7 +167,7 @@ const Ies = () => {
               >
                 <span className="text-4xl">{item.icon}</span>
                 <div>
-                  <h3 className="text-2xl font-semibold text-indigo-600 mb-2">
+                  <h3 className="text-2xl font-semibold text-indigo-600 mb-2 hover:underline">
                     {item.title}
                   </h3>
                   <p className="text-gray-700">{item.description}</p>
