@@ -104,7 +104,9 @@ const Ies = () => {
          
           <i className="text-blue-500 ml-1 mr-1">
           <u> 
+          <a href="mailto:nrd-pt@pnri.dost.gov.ph">
            nrd-pt@pnri.dost.gov.ph.
+           </a>
           </u>
           </i><br></br>
         
@@ -131,15 +133,18 @@ const Ies = () => {
           <p className="mt-5 ml-15">5. Shipper’s Declaration of Dangerous Goods, Airway Bill and Packaging List (for imported RAM only).</p>
           
           <p className="mt-5 font-bold">The Certificate of Release needs to be requested from the Licensing, Review and Evaluation Section. Kindly contact them for instructions at
-          <u className="ml-2 text-blue-500 font-bold">nrd-lre@pnri.dost.gov.ph.</u></p>
+          <a href="mailto:nrd-lre@pnri.dost.gov.ph">
+          <u className="ml-2 text-blue-500 font-bold">nrd-lre@pnri.dost.gov.ph.</u></a></p>
 
           <p className="mt-5">For the payment and claiming of permit/s, kindly schedule an appointment online through the link</p>
           <a href="https://services.pnri.dost.gov.ph/portal/nrd/Appoint" target="_blank">
           <p className="text-blue-900"><u>https://services.pnri.dost.gov.ph/portal/nrd/Appoint</u>.</p>
           </a>
           
-          <p className="mt-5 mb-20">For any questions and clarifications, you may address your concern or inquiry to <i><u className="text-blue-500">nrd-pt@pnri.dost.gov.ph</u></i>.</p>
-
+          <p className="mt-5 mb-20">For any questions and clarifications, you may address your concern or inquiry to 
+          <a href="mailto:nrd-pt@pnri.dost.gov.ph">
+          <i><u className="text-blue-500 ml-1">nrd-pt@pnri.dost.gov.ph</u></i>.</a></p>
+          
 
           
           </p>

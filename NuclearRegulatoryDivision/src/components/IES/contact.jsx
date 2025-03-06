@@ -12,6 +12,8 @@ import LresRating from "./IesRating";
 import Inspection from "../../assets/inspection.jpg"
 import Enforcement from "../../assets/enforcement.jpg"
 import { Link, useHref } from "react-router-dom";
+import React from "react";
+import { FaLinkedin } from "react-icons/fa";
 
 const Ies = () => {
   useEffect(() => {
@@ -40,7 +42,51 @@ const Ies = () => {
       
 
         {/* Contact Us */}
-           
+        <div className="flex p-6 w-500">
+  <div className="md:w-2/3 bg-white border border-gray-300 rounded-lg p-6 shadow-md">
+    <h2 className="mb-6 text-3xl font-semibold text-indigo-600 ">
+      Contact Us
+    </h2>
+
+    {/* Email Contact */}
+    <div className="mb-4">
+      <p className="text-lg font-medium text-gray-700">
+        <span className="font-semibold">IES email:</span> 
+        <a href="mailto:nrd-ie@pnri.dost.gov.ph" className="text-indigo-600 hover:underline">
+          nrd-ie@pnri.dost.gov.ph
+        </a>
+      </p>
+    </div>
+
+    {/* Permit to Transport Application */}
+    <div className="mb-4">
+      <p className="text-lg font-medium text-gray-700">
+        <span className="font-semibold">Permit to Transport Application:</span>
+        <a href="mailto:nrd-pt@pnri.dost.gov.ph" className="text-indigo-600 hover:underline">
+          nrd-pt@pnri.dost.gov.ph
+        </a>
+      </p>
+    </div>
+
+    {/* Telephone Number */}
+    <div className="mb-4">
+      <p className="text-lg font-medium text-gray-700">
+        <span className="font-semibold">Telephone No.:</span> 
+        (02) 8929-6010 to 19 loc. 266 / (02) 8929-6011 to 19 loc. 266
+      </p>
+    </div>
+
+    {/* Mobile Number */}
+    <div className="mb-4">
+      <p className="text-lg font-medium text-gray-700">
+        <span className="font-semibold">Mobile No.:</span> 
+        0995-009-3518 (Globe)
+      </p>
+    </div>
+  </div>
+</div>
+
+        
            
                
       </section> 
