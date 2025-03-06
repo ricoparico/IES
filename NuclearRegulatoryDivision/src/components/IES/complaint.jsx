@@ -2,17 +2,9 @@ import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import LresNavbar from "./IesNavbar";
-import logo1 from "../../assets/BP-LOGO-BT.png"; // Add multiple logo imports
-import logo2 from "../../assets/foi_logo.png";
-import logo3 from "../../assets/INSO_Thumbnail.png";
-import logo4 from "../../assets/AEW52_Thumbnail.png";
 import LresHero from "./IesHero";
 import IesFooter from "./IesFooter";
-import LresRating from "./IesRating";
-import Inspection from "../../assets/inspection.jpg";
-import Enforcement from "../../assets/enforcement.jpg";
-import { Link, useHref } from "react-router-dom";
-import { Bold } from "lucide-react";
+import emailjs from "emailjs-com"; // Import emailjs
 
 const Ies = () => {
   useEffect(() => {
@@ -30,7 +22,8 @@ const Ies = () => {
     complaintSummary: "",
   });
 
-  const [responseSent, setResponseSent] = useState(false); // Track if the response has been sent
+  const [responseSent, setResponseSent] = useState(false);
+  const [isAnonymous, setIsAnonymous] = useState(false);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -38,26 +31,80 @@ const Ies = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle form submission
+  // Handle checkbox change for "Report Anonymously"
+  const handleCheckboxChange = (e) => {
+    const checked = e.target.checked;
+    setIsAnonymous(checked);
+
+    // Clear the input fields for required fields if anonymous
+    if (checked) {
+      setFormData({
+        ...formData, // Retain existing data for fields like complaintSummary, licensee, and address
+        firstName: "",
+        middleName: "",
+        lastName: "",
+        email: "",
+        mobileNo: "",
+      });
+    } else {
+      setFormData({
+        ...formData, // Clear and reset only when switching off anonymous mode
+      });
+    }
+  };
+
+  // Handle form submission and send email
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Clear the form fields
-    setFormData({
-      firstName: "",
-      middleName: "",
-      lastName: "",
-      email: "",
-      mobileNo: "",
-      licensee: "",
-      address: "",
-      complaintSummary: "",
-    });
+    // If the user is anonymous, we can either leave out the email or set a placeholder.
+    if (isAnonymous) {
+      formData.email = "anonymous@domain.com"; // Or leave it empty
+      formData.mobileNo = "N/A"; // Optional placeholder
+    }
 
-    // Display the "Response Sent" message
-    setResponseSent(true);
+    const updatedFormData = {
+      ...formData,
+      to_email: "nrd-ie@pnri.dost.gov.ph", // Add recipient email
+      firstName: formData.firstName, // Ensure firstName is correctly passed
+      complainSummary: formData.complaintSummary, 
+      Licensee: formData.licensee,// Correct spelling (if needed)
+      address: formData.address
+    };
 
-    // Optionally hide the message after 5 seconds (you can adjust the time)
+    // Send the form data to email using EmailJS
+    emailjs
+      .send(
+        "service_snipdea", // Your EmailJS service ID
+        "template_j0znk5a", // Your EmailJS template ID
+        updatedFormData, // Updated form data with recipient email
+        "bhs5Mg-5UOfqJqJVK" // Your EmailJS user ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setResponseSent(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    // Optionally clear form data (or just set to empty fields if not anonymous)
+    if (!isAnonymous) {
+      setFormData({
+        firstName: "",
+        middleName: "",
+        lastName: "",
+        email: "",
+        mobileNo: "",
+        licensee: "",
+        address: "",
+        complaintSummary: "",
+      });
+    }
+
+    // Optionally hide the message after 5 seconds
     setTimeout(() => {
       setResponseSent(false);
     }, 5000);
@@ -81,6 +128,8 @@ const Ies = () => {
           <input
             className="mr-2 mt-5"
             type="checkbox"
+            checked={isAnonymous}
+            onChange={handleCheckboxChange}
           />{" "}
           Report Anonymously (I-check ang box kung ayaw magpakilala sa reklamo)
 
@@ -88,7 +137,11 @@ const Ies = () => {
           <form className="flex flex-col mt-5" onSubmit={handleSubmit}>
             <div className="flex space-x-4 mb-4 mt-2">
               <div className="flex flex-col w-66">
-                <label className="font-serif">First Name</label>
+                <label
+                  className={`font-serif ${isAnonymous ? "text-gray-400" : "text-black"}`}
+                >
+                  First Name
+                </label>
                 <input
                   name="firstName"
                   value={formData.firstName}
@@ -96,11 +149,16 @@ const Ies = () => {
                   placeholder="Firstname"
                   className="h-10 bg-gray border-1 border-gray-400 rounded-sm px-1"
                   type="text"
+                  disabled={isAnonymous}
                 />
               </div>
 
               <div className="flex flex-col w-66">
-                <label className="font-serif">Middle Name</label>
+                <label
+                  className={`font-serif ${isAnonymous ? "text-gray-400" : "text-black"}`}
+                >
+                  Middle Name
+                </label>
                 <input
                   name="middleName"
                   value={formData.middleName}
@@ -108,11 +166,16 @@ const Ies = () => {
                   placeholder="Middlename"
                   className="h-10 bg-gray border-1 border-gray-400 rounded-sm px-1"
                   type="text"
+                  disabled={isAnonymous}
                 />
               </div>
 
               <div className="flex flex-col w-66">
-                <label className="font-serif">Last Name</label>
+                <label
+                  className={`font-serif ${isAnonymous ? "text-gray-400" : "text-black"}`}
+                >
+                  Last Name
+                </label>
                 <input
                   name="lastName"
                   value={formData.lastName}
@@ -120,13 +183,18 @@ const Ies = () => {
                   placeholder="Lastname"
                   className="h-10 bg-gray border-1 border-gray-400 rounded-sm px-1"
                   type="text"
+                  disabled={isAnonymous}
                 />
               </div>
             </div>
 
             <div className="flex space-x-4 mb-4 mt-2">
               <div className="flex flex-col w-66">
-                <label className="font-serif">Email</label>
+                <label
+                  className={`font-serif ${isAnonymous ? "text-gray-400" : "text-black"}`}
+                >
+                  Email
+                </label>
                 <input
                   name="email"
                   value={formData.email}
@@ -134,11 +202,16 @@ const Ies = () => {
                   placeholder="ex.juandelacruz@gmail.com"
                   className="h-10 bg-gray border-1 border-gray-400 rounded-sm px-1"
                   type="email"
+                  disabled={isAnonymous}
                 />
               </div>
 
               <div className="flex flex-col w-66">
-                <label className="font-serif">Mobile No.</label>
+                <label
+                  className={`font-serif ${isAnonymous ? "text-gray-400" : "text-black"}`}
+                >
+                  Mobile No.
+                </label>
                 <input
                   name="mobileNo"
                   value={formData.mobileNo}
@@ -146,6 +219,7 @@ const Ies = () => {
                   placeholder="+63"
                   className="h-10 bg-gray border-1 border-gray-400 rounded-sm px-1"
                   type="text"
+                  disabled={isAnonymous}
                 />
               </div>
             </div>
@@ -203,7 +277,6 @@ const Ies = () => {
               <span className="text-black">I Agree to </span>
               <span className="text-red-500">Privacy Policy</span>
             </p>
-            
 
             <button
               className="bg-gray-700 mt-10 rounded-sm text-white h-10 w-30 hover:bg-gray-500"
@@ -215,7 +288,7 @@ const Ies = () => {
 
           {/* Display 'Response Sent' message after form submission */}
           {responseSent && (
-            <div className="mt-5 text-lg font-bold text-green-500">
+            <div className="mt-5 text-lg text-green-500">
               Response Sent! Thank you for your cooperation.
             </div>
           )}
