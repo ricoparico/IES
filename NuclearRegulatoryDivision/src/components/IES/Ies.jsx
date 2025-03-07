@@ -170,7 +170,7 @@ const Ies = () => {
                   <h3 className="text-2xl font-semibold text-indigo-600 mb-2 hover:underline">
                     {item.title}
                   </h3>
-                  <p className="text-gray-700">{item.description}</p>
+                  <p className="text-gray-700 text-justify">{item.description}</p>
                 </div>
               </Link>
             ))}

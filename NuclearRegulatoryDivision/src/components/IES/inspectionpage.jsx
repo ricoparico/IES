@@ -119,7 +119,7 @@ const Ies = () => {
        (a) Notice of Violation
       </p>
 
-      <p className="text-xl">A Notice of Violation is a written notice that sets forth one or more violations to PNRI 
+      <p className="text-xl text-justify">A Notice of Violation is a written notice that sets forth one or more violations to PNRI 
       requirements and requires the licensee to submit a written reply containing: </p>
 
       <p className="text-xl ">(1) An explanation why or how the violation occurred or, if contested, the basis for 

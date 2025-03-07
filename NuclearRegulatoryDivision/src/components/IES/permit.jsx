@@ -114,7 +114,7 @@ const Ies = () => {
           takes place every Tuesday and Thursday from 10:00 AM to 4:00 PM.
           
           
-          <i className="text-red-600 mr-1 ml-2 hover:underline">Permits shall not be issued on any other day unless otherwise advised.</i> 
+          <i className="text-red-600 mr-1 ml-2 hover:underline text-justify">Permits shall not be issued on any other day unless otherwise advised.</i> 
           <p className="mt-5">Please accomplish and email the following requirements for securing a Permit to Transport (e-copy/scanned):</p>
 
           <p className="mt-5 ml-15">1. Request/Cover letter regarding the plan to transport your radioactive material to your planned destination addressed to the following:</p>
