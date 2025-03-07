@@ -180,7 +180,7 @@ const Ies = () => {
           <h1 className="pt-10 text-indigo-600 text-xl md:text-4xl font-bold capitalize">
             Conducted Inspection
           </h1>
-          <h3 className="text-3xl font-semibold text-black-600 mb-2 mt-4">2021-2025</h3>
+          <h3 className="text-3xl font-semibold text-black-600 mb-2 mt-4">2020-2025</h3>
           <div  className="bg-white p-10 rounded-xl shadow-lg border-l-4 border-blue-500 flex items-start space-x-4 mt-10" data-aos="fade-down">
             <img className="h-130 w-500 rounded-xl"  src={Inspection} alt="conducted inspection" />
           </div>
@@ -188,7 +188,7 @@ const Ies = () => {
           <h1 className="pt-10 text-indigo-600 text-xl md:text-4xl font-bold capitalize">
             Enforcement Action
           </h1>
-          <h3 className="text-3xl font-semibold text-black-600 mb-2 mt-4">2021-2025</h3>
+          <h3 className="text-3xl font-semibold text-black-600 mb-2 mt-4">2020-2025</h3>
           <div  className="bg-white p-10 rounded-xl shadow-lg border-l-4 border-blue-500 flex items-start space-x-4 mt-10" data-aos="fade-down">
             <img className="h-130 w-500 rounded-xl"  src={Enforcement} alt="conducted inspection" /></div>
         </div>
