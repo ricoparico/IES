@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="bg-white border-gray-200 shadow-xl ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" className="flex items-center justify-between space-x-3 rtl:space-x-reverse ">
-          <img src={logo} className="h-10 w-10 rounded-full" alt="PNRI Logo" />
+          <img src={logo} className="h-10 w-15 rounded-full" alt="PNRI Logo" />
           <span className="hidden lg:block self-center text-xl lg:text-2xl font-semibold whitespace-nowrap text-black ">
             Inspection and Enforcement
           </span>

@@ -42,7 +42,7 @@ const Ies = () => {
       
 
         {/* Contact Us */}
-        <div className="flex p-6 w-500">
+        <div className="border-l-4 border-indigo-500 flex p-6 w-500" data-aos="fade-in" data-aos-delay="300">
   <div className="md:w-2/3 bg-white border border-gray-300 rounded-lg p-6 shadow-md">
     <h2 className="mb-6 text-3xl font-semibold text-indigo-600 ">
       Contact Us
@@ -52,7 +52,7 @@ const Ies = () => {
     <div className="mb-4">
       <p className="text-lg font-medium text-gray-700">
         <span className="font-semibold">IES email:</span> 
-        <a href="mailto:nrd-ie@pnri.dost.gov.ph" className="text-indigo-600 hover:underline">
+        <a href="mailto:nrd-ie@pnri.dost.gov.ph" className="text-indigo-600 hover:underline ml-1">
           nrd-ie@pnri.dost.gov.ph
         </a>
       </p>
@@ -62,7 +62,7 @@ const Ies = () => {
     <div className="mb-4">
       <p className="text-lg font-medium text-gray-700">
         <span className="font-semibold">Permit to Transport Application:</span>
-        <a href="mailto:nrd-pt@pnri.dost.gov.ph" className="text-indigo-600 hover:underline">
+        <a href="mailto:nrd-pt@pnri.dost.gov.ph" className="text-indigo-600 hover:underline ml-1">
           nrd-pt@pnri.dost.gov.ph
         </a>
       </p>
@@ -72,7 +72,7 @@ const Ies = () => {
     <div className="mb-4">
       <p className="text-lg font-medium text-gray-700">
         <span className="font-semibold">Telephone No.:</span> 
-        <i className="hover:underline">(02) 8929-6010 to 19 loc. 266</i> / <i className="hover:underline">(02) 8929-6011 to 19 loc. 266</i>
+        <i className="hover:underline ml-1">(02) 8929-6010 to 19 loc. 266</i> / <i className="hover:underline">(02) 8929-6011 to 19 loc. 266</i>
       </p>
     </div>
 
@@ -80,7 +80,7 @@ const Ies = () => {
     <div className="mb-4">
       <p className="text-lg font-medium text-gray-700">
         <span className="font-semibold">Mobile No.:</span> 
-        <i className="hover:underline">0995-009-3518 </i>(Globe)
+        <i className="hover:underline ml-1">0995-009-3518 </i>(Globe)
       </p>
     </div>
   </div>
